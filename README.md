@@ -5,22 +5,29 @@
 # Development
 
 1. Clonar el proyecto
-2. Copiar el ```env.template``` y renombar a ```.env```
+2. Copiar el `env.template` y renombar a `.env`
 3. Ejecutar
+
 ```
 yarn install
 ```
+
 4. Levantar la imagen (Docker desktop)
+
 ```
 docker-compose up -d
 ```
 
 5. Levantar el backend de Nest
+
 ```
 yarn start:dev
 ```
 
 6. Visitar el sitio
+
 ```
 http://localhost:3000/graphql
 ```
+
+7. Ejecutar el Mutation `executeSeed` para llenar BD

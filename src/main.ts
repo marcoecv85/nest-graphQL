@@ -8,8 +8,9 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true,
-    })
+      // forbidNonWhitelisted: true, Esto se comenta para evitar un error de a la hora de tener 2 argumentos en los queries
+      // Estos argumentos son paginationArgs y searchArgs ya que class-validator cuando hay mas de un args no reconoce el segundo arg
+    }),
   );
   await app.listen(3000);
 }
